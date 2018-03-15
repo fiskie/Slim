@@ -286,6 +286,8 @@ class Route extends Routable implements RouteInterface
      */
     public function prepare(ServerRequestInterface $request, array $arguments)
     {
+        $this->arguments = [];
+
         // Add the arguments
         foreach ($arguments as $k => $v) {
             $this->setArgument($k, $v);
